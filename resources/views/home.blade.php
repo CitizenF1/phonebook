@@ -17,12 +17,11 @@
 
         <div class="form-group">
             <label for="phone">Телефон</label>
-            <input type="text" name="name" placeholder="Введите номер" id="name" class="form-control">
+            <input type="number" name="phone" placeholder="Введите номер" id="number" class="form-control">
         </div>
 
         <button type="submit" name="btn btn-success">Сохранить</button>
     </form>
-
 
     <div class="table-responsive">
         <table class="table table-hover table-striped">

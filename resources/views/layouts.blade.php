@@ -23,7 +23,7 @@
             <form>
                 <div class="form-row">
                     <div class="form-group col-md-10">
-                        <input type="text" class="form-control" id="q" name="q" placeholder=Поиск...">
+                        <input type="text" class="form-control" id="q" name="q" placeholder="Поиск...">
                     </div>
                     <div class="form-group col-md-2">
                         <button type="submit" class="btn btn-primary btn-block">Поиск</button>
