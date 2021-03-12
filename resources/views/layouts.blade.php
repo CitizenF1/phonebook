@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/app.css">
     <title>Телефонный справочник</title>
 </head>
 <body>
@@ -22,10 +23,10 @@
             <form>
                 <div class="form-row">
                     <div class="form-group col-md-10">
-                        <input type="text" class="form-control" id="q" name="q" placeholder="Search...">
+                        <input type="text" class="form-control" id="q" name="q" placeholder=Поиск...">
                     </div>
                     <div class="form-group col-md-2">
-                        <button type="submit" class="btn btn-primary btn-block">Search</button>
+                        <button type="submit" class="btn btn-primary btn-block">Поиск</button>
                     </div>
                 </div>
 
