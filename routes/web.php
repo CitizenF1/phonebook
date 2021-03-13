@@ -24,4 +24,4 @@ Route::post('/update/{$id}', 'contactController@updateContact')->name('update');
 
 Route::post('/submit', 'contactController@submit')->name('contact-form');
 
-Route::get('/{$id}/delete', 'contactController@deleteContact')->name('delete');
+Route::get('/delete/{$id}', 'contactController@deleteContact')->name('delete');

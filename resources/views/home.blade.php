@@ -24,10 +24,10 @@
     </form>
 
     <div class="table-responsive">
-        <table class="table table-hover table-striped">
+        <table class="table table-hover table-primary">
             <thead>
             <tr>
-                <th scope="col">#</th>
+                <th scope="col">id</th>
                 <th scope="col">Имя</th>
                 <th scope="col">Email</th>
                 <th scope="col">Телефон</th>
@@ -43,8 +43,17 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->phone }}</td>
-                <td scope="coll"><a href="{{ route('update', $user->id) }}"><button class="btn">Изменить</button></a></td>
-                <td scope="coll"><a href="{{ route('delete', $user->id) }}"><button class="btn">Удалить</button></a></td>
+                <td>
+                    <a href="{{ route('update', $user) }}"><button type="submit" class="btn">Изменить</button></a>
+                </td>
+                <td>
+                    <form method="POST" action="{{ route('delete', $user) }}">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn">Удалить</button>
+                    </form>
+                </td>
+
             </tr>
 
             @endforeach
@@ -58,3 +67,7 @@
         <p>Записей не найдено...</p>
     @endif--}}
 @endsection
+
+
+<!--                <td scope="coll"><a href="{{--{{ route('update', $user) }}--}}"><button type="submit" class="btn">Изменить</button></a></td>
+                <td scope="coll"><a href="{{--{{ route('delete', $user) }}--}}"><button type="submit" class="btn">Удалить</button></a></td>-->

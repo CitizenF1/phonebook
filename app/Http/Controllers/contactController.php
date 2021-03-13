@@ -28,11 +28,9 @@ class contactController extends Controller
         return view('update',['users' => $contacts->find($id)]);
     }
 
-    public function deleteContact($id)
+    public function destroy($id)
     {
-        Contact::find($id)->delete();
-
-        return redirect()->route('home');
-
+        $user = Contact::find($id);
+        $user->delete();
     }
 }

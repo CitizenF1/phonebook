@@ -11,7 +11,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
-    <a class="navbar-brand" href="#">Телефонный справочник</a>
+    <a class="navbar-brand" href="#">Cправочник</a>
 </nav>
 
 <div class="container">
