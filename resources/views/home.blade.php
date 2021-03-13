@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <form action="/submit" method="post">
+    <form action="/submit" method="post" class="m-3 p-3">
         @csrf
 
         <div class="form-group">
@@ -20,7 +20,7 @@
             <input type="number" name="phone" placeholder="Введите номер" id="number" class="form-control">
         </div>
 
-        <button type="submit" name="btn btn-success">Сохранить</button>
+        <button type="submit" class="btn btn-success">Сохранить</button>
     </form>
 
     <div class="table-responsive">
@@ -34,66 +34,15 @@
             </tr>
             </thead>
             <tbody>
+
+            @foreach($users as $user)
             <tr>
-                <th scope="row">1</th>
-                <td>John Doe</td>
-                <td>john@mail.com</td>
-                <td>555 555-55-55</td>
+                <th scope="row">{{ $user->id }}</th>
+                <td>{{ $user->name }}</td>
+                <td>{{ $user->email }}</td>
+                <td>{{ $user->phone }}</td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>John Doe</td>
-                <td>john@mail.com</td>
-                <td>555 555-55-55</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>John Doe</td>
-                <td>john@mail.com</td>
-                <td>555 555-55-55</td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>John Doe</td>
-                <td>john@mail.com</td>
-                <td>555 555-55-55</td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>John Doe</td>
-                <td>john@mail.com</td>
-                <td>555 555-55-55</td>
-            </tr>
-            <tr>
-                <th scope="row">6</th>
-                <td>John Doe</td>
-                <td>john@mail.com</td>
-                <td>555 555-55-55</td>
-            </tr>
-            <tr>
-                <th scope="row">7</th>
-                <td>John Doe</td>
-                <td>john@mail.com</td>
-                <td>555 555-55-55</td>
-            </tr>
-            <tr>
-                <th scope="row">8</th>
-                <td>John Doe</td>
-                <td>john@mail.com</td>
-                <td>555 555-55-55</td>
-            </tr>
-            <tr>
-                <th scope="row">9</th>
-                <td>John Doe</td>
-                <td>john@mail.com</td>
-                <td>555 555-55-55</td>
-            </tr>
-            <tr>
-                <th scope="row">10</th>
-                <td>John Doe</td>
-                <td>john@mail.com</td>
-                <td>555 555-55-55</td>
-            </tr>
+            @endforeach
             </tbody>
         </table>
 

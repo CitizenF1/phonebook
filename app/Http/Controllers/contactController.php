@@ -12,5 +12,9 @@ class contactController extends Controller {
 
         $contact = new Contact();
         $contact->name = $req->input('name');
+        $contact->email = $req->input('email');
+        $contact->phone = $req->input('phone');
+
+        $contact->save();
     }
 }

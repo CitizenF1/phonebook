@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'MainController@index');
+
+Route::get('/search', 'MainController@search')->name('search');
 
 Route::post('/submit', 'contactController@submit')->name('contact-form');
