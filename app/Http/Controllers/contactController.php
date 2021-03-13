@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
 
-class contactController extends Controller {
+class contactController extends Controller
+{
 
-    public function submit(Request $req) {
+    public function submit(Request $req)
+    {
 
         $contact = new Contact();
         $contact->name = $req->input('name');
@@ -16,5 +18,11 @@ class contactController extends Controller {
         $contact->phone = $req->input('phone');
 
         $contact->save();
+    }
+
+    public function updateContact($id)
+    {
+        $contacts = new Contact;
+        return view('update',['data' => $contacts->find($id)]);
     }
 }
