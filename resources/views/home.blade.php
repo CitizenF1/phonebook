@@ -43,8 +43,8 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->phone }}</td>
-                <td scope="coll"><a href="{{ route('contact-update', $user->id) }}"><button class="btn">Изменить</button></a></td>
-                <td scope="coll"><a href="#"><button class="btn">Удалить</button></a></td>
+                <td scope="coll"><a href="{{ route('update', $user->id) }}"><button class="btn">Изменить</button></a></td>
+                <td scope="coll"><a href="{{ route('delete', $user->id) }}"><button class="btn">Удалить</button></a></td>
             </tr>
 
             @endforeach

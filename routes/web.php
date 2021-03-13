@@ -11,10 +11,17 @@
 |
 */
 
-Route::get('/', 'MainController@index');
+
+Route::get('/', 'MainController@index')->name('home');
 
 Route::get('/search', 'MainController@search')->name('search');
 
-Route::get('/update/{$id}', 'contactController@updateContact')->name('contact-update');
+Route::post('/update/{$id}', 'contactController@updateContact')->name('update');
+
+/*Route::get('/update/{$id}', function () {
+    return view('update');
+});*/
 
 Route::post('/submit', 'contactController@submit')->name('contact-form');
+
+Route::get('/{$id}/delete', 'contactController@deleteContact')->name('delete');

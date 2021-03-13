@@ -18,11 +18,21 @@ class contactController extends Controller
         $contact->phone = $req->input('phone');
 
         $contact->save();
+
+        return redirect()->route('home');
     }
 
     public function updateContact($id)
     {
         $contacts = new Contact;
-        return view('update',['data' => $contacts->find($id)]);
+        return view('update',['users' => $contacts->find($id)]);
+    }
+
+    public function deleteContact($id)
+    {
+        Contact::find($id)->delete();
+
+        return redirect()->route('home');
+
     }
 }
